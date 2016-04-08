@@ -1,45 +1,38 @@
+<div class="params">
+  <% params %>
+</div>
+
 <article>
   <form action="" method="post" accept-charset="utf-8">
-    <label for="word">Word to Score:</label>
-    <input type="text" name="word_hash[word]" value="" id="word">
+    <label for="wordone">Word to Score:</label>
+    <input type="text" name="word_hash[wordone]" value="" id="wordone">
+
+  <form action="" method="post" accept-charset="utf-8">
+    <label for="wordtwo">Word to Score:</label>
+    <input type="text" name="word_hash[wordtwo]" value="" id="wordtwo">
+
+    <form action="" method="post" accept-charset="utf-8">
+      <label for="wordthree">Word to Score:</label>
+      <input type="text" name="word_hash[wordthree]" value="" id="wordthree">
 
     <input type="submit" value="Submit">
 
-<% if @word %>
+
+<% if @wordone %>
     <p>
-      <%= @word.word %> is worth <%= @word.score %> points.
+      <%= @wordone.wordone %> is worth <%= @wordone.scoreone %> points.
     </p>
 <% end %>
 
-  </form>
-</article>
-
-<article>
-  <form action="" method="post" accept-charset="utf-8">
-    <label for="word">Word to Score:</label>
-    <input type="text" name="word_hash[word]" value="" id="word">
-
-    <input type="submit" value="Submit">
-
-<% if @word %>
+<% if @wordtwo %>
     <p>
-      <%= @word.word %> is worth <%= @word.score %> points.
+      <%= @wordtwo.wordtwo %> is worth <%= @wordtwo.scoretwo %> points.
     </p>
 <% end %>
 
-  </form>
-</article>
-
-<article>
-  <form action="" method="post" accept-charset="utf-8">
-    <label for="word">Word to Score:</label>
-    <input type="text" name="word_hash[word]" value="" id="word">
-
-    <input type="submit" value="Submit">
-
-<% if @word %>
+<% if @wordthree %>
     <p>
-      <%= @word.word %> is worth <%= @word.score %> points.
+      <%= @wordthree.wordthree %> is worth <%= @wordthree.scorethree %> points.
     </p>
 <% end %>
 

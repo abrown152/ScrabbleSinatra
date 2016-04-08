@@ -1,6 +1,6 @@
 require 'sinatra'
 require_relative 'lib/score'
-require_relative 'lib/score-many'
+require_relative 'lib/score_many'
 
 class MyScoring < Sinatra::Base
 
@@ -14,7 +14,7 @@ class MyScoring < Sinatra::Base
     erb :score
   end
 
-  get '/score-many' do
+  get '/score_many' do
     @page_title = "Score Many Words"
     erb :score_many
   end
@@ -27,8 +27,11 @@ class MyScoring < Sinatra::Base
 
   post '/score_many' do
   @page_title = "Score Many Words"
-  @word = Scrabble::Word.new(params["word_hash"]["word"])
-  erb :score-many
+  @wordone = Scrabble::WordOne.new(params["word_hash"]["wordone"])
+  @wordtwo = Scrabble::WordTwo.new(params["word_hash"]["wordtwo"])
+  @wordthree = Scrabble::WordThree.new(params["word_hash"]["wordthree"])
+
+  erb :score_many
   end
 
   run!
