@@ -11,30 +11,36 @@
     <label for="wordtwo">Word to Score:</label>
     <input type="text" name="word_hash[wordtwo]" value="" id="wordtwo">
 
-    <form action="" method="post" accept-charset="utf-8">
-      <label for="wordthree">Word to Score:</label>
-      <input type="text" name="word_hash[wordthree]" value="" id="wordthree">
+  <form action="" method="post" accept-charset="utf-8">
+    <label for="wordthree">Word to Score:</label>
+    <input type="text" name="word_hash[wordthree]" value="" id="wordthree">
 
     <input type="submit" value="Submit">
 
+  <!-- # <%# word_array = [] %> -->
 
-<% if @wordone %>
-    <p>
-      <%= @wordone.wordone %> is worth <%= @wordone.scoreone %> points.
-    </p>
-<% end %>
+    <% if @wordone %>
+      <!-- <%# word_array << @wordone.wordone %> -->
+        <p>
+          <%= @wordone.wordone %> is worth <%= @wordone.scoreone %> points.
+          <!-- <%= word_array %> -->
+        </p>
+    <% end %>
 
-<% if @wordtwo %>
-    <p>
-      <%= @wordtwo.wordtwo %> is worth <%= @wordtwo.scoretwo %> points.
-    </p>
-<% end %>
+    <% if @wordtwo %>
+      <!-- <%# word_array << @wordtwo.wordtwo %> -->
+        <p>
+          <%= @wordtwo.wordtwo %> is worth <%= @wordtwo.scoretwo %> points.
+          <!-- <%=# word_array %> -->
+        </p>
+    <% end %>
 
-<% if @wordthree %>
-    <p>
-      <%= @wordthree.wordthree %> is worth <%= @wordthree.scorethree %> points.
-    </p>
-<% end %>
-
+    <% if @wordthree %>
+      <!-- <%# word_array << @wordthree.wordthree %> -->
+        <p>
+          <%= @wordthree.wordthree %> is worth <%= @wordthree.scorethree %> points.
+        </p>
+        <!-- <%=# word_array %> -->
+    <% end %>
   </form>
 </article>
